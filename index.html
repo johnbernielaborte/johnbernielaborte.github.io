@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Welcome | John Bernie Laborte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Bernie Laborte | Digital Accessibility Advocate</title>
   </head>
   <body>
-    <a href="#main-content">Skip to The Main Content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
-      <!-- Image file here -->
-      <h1>Welcome to my personal website</h1>
-      <nav>
+      <!-- Add alt text once image source is added -->
+      <h1>John Bernie Laborte</h1>
+      <p>Digital Accessibility Advocate</p>
+      <nav aria-label="Main Navigation">
         <ul>
           <li><a href="./index.html" aria-current="page">Home</a></li>
-          <li><a href="pages/articles.html">My Articles</a></li>
-          <li><a href="pages/services.html">My Services</a></li>
-          <li><a href="pages/contact.html">Contact Me</a>
-          <li><a href="pages/about.html">About Me</a></li>
+          <li><a href="pages/articles.html">Articles</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/about.html">About</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section id="main-content">
-        <h2>Overview</h2>
-        <p>Hi! My name is John Bernie Laborte, a visually impaired advocate aiming to raise awareness about digital accessibility.</p>
-        <p>To learn more about me and what I do, <a href="pages/about.html">Visit My About Page</a>.</p>
+
+    <main id="main-content" tabindex="-1">
+      <section aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Overview</h2>
+        <p>Hi! My name is John Bernie Laborte. I am a visually impaired advocate dedicated to raising awareness about digital accessibility and inclusive design.</p>
+        <p><a href="pages/about.html">Learn more about my advocacy and background</a>.</p>
       </section>
-      <section>
-        <h2>My Articles</h2>
-        <p>Accessibility is often neglected due to lack of awareness of how this can shape us visually impaired leading us to be left behind, outdated, and sometimes, discriminated because of it.</p>
-        <p>Let's learn how we can help our community to build a functioning inclusive environment by knowing how we approach accessibility.</p>
-        <a href="pages/articles.html">Read My Articles to learn more</a>
+
+      <section aria-labelledby="articles-heading">
+        <h2 id="articles-heading">Articles &amp; Insights</h2>
+        <p>Inaccessibility leaves visually impaired individuals behind. Discover how inclusive design shapes accessible digital environments for everyone.</p>
+        <p><a href="pages/articles.html">Explore articles on digital accessibility</a>.</p>
       </section>
-      <section>
-        <h2>My Services</h2>
-        <p>Want to see how accessibility looks like up close and apply it to your own business? I build projects for any small businesses with accessibility in mine. <a href="pages/services.html">Visit My Services Page</a>to learn more of my services.</p>
+
+      <section aria-labelledby="services-heading">
+        <h2 id="services-heading">Services</h2>
+        <p>Want to make your website accessible? I help small businesses design and build web experiences with digital accessibility in mind.</p>
+        <p><a href="pages/services.html">View web accessibility services</a>.</p>
       </section>
     </main>
+
     <footer>
-      <address>
-        <h2>Contact Me</h2>
-        <a href="https://www.facebook.com/share/16Dhq3uDYin/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Message Me on Facebook (Open in New Site)</a>
-        <a href="https://www.instagram.com/johnberniep.laborte?stkn=MTMweHRibzJyYW1heA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Message Me on Instagram (Open in New Site)</a>
-        <p>Send me an email at <a href="mailto:johnbernielaborte@gmail.com">johnbernielaborte@gmail.com</a>.</p>
-      </address>
-      <p>&copy; 2026 John Bernie Laborte. All rights reserve.</p>
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <address>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/share/16Dhq3uDYin/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                Facebook profile <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/johnberniep.laborte?stkn=MTMweHRibzJyYW1heA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                Instagram profile <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              Email: <a href="mailto:johnbernielaborte@gmail.com">johnbernielaborte@gmail.com</a>
+            </li>
+          </ul>
+        </address>
+      </section>
+      <p>&copy; 2026 John Bernie Laborte. All rights reserved.</p>
     </footer>
   </body>
 </html>
